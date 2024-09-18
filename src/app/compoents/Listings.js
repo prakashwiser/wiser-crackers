@@ -78,7 +78,7 @@ const HomeListing = () => {
         <div className="row">
           <div className="col-md-3">
             <div>
-              <p>Filter</p>
+              <p>Filters</p>
               <div className="my-2">
                 <label
                   className="form-check-label d-flex gap-2"
