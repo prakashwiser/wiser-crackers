@@ -188,7 +188,7 @@ const HomeListing = () => {
                     onChange={handleFilterChange}
                     style={{ transform: "scale(1.5)" }}
                   />{" "}
-                  Othres
+                  Others
                 </label>
               </div>
             </div>
