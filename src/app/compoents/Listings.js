@@ -209,7 +209,7 @@ const HomeListing = () => {
                           }
                           className="card-img-top im"
                           alt={listing.title}
-                          style={{ height: "200px", objectFit: "cover" }}
+                          style={{ height: "200px", objectFit: "fill" }}
                           onError={replaceImage}
                         />
                       </div>
@@ -292,10 +292,10 @@ const HomeListing = () => {
       <style jsx>{`
         .card:hover {
           border-radius: 8px;
-          transition: box-shadow 0.7s;
+          transition: all 0.7s;
           width: 101%;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          // scale: 1.1;
+           scale: 1.1;
         }
       `}</style>
     </>
