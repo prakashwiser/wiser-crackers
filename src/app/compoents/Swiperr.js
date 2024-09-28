@@ -27,7 +27,7 @@ function Swiperr() {
       <SwiperSlide>
         <img
           className="banner"
-          src="https://www.wallpapertip.com/wmimgs/59-597982_happy-diwali-crackers-hd.jpg"
+          src="https://p4.wallpaperbetter.com/wallpaper/551/233/253/crackers-and-lamps-diwali-wallpaper-preview.jpggit"
         />
       </SwiperSlide>
     </Swiper>

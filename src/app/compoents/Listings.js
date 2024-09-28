@@ -9,7 +9,8 @@ const HomeListing = () => {
   const [allListings, setAllListings] = useState([]);
   const [listings, setListings] = useState(allListings);
   const [filter, setFilter] = useState("all");
-  let replaceImage = 'https://raw.githubusercontent.com/prakashwiser/assets/main/crackers_wiser/'
+  let replaceImage =
+    "https://raw.githubusercontent.com/prakashwiser/assets/main/crackers_wiser/";
   useEffect(() => {
     axios
       .get("https://66ea644a55ad32cda4789858.mockapi.io/crackers")
@@ -20,54 +21,21 @@ const HomeListing = () => {
   }, []);
   const handleFilterChange = (e) => {
     const value = e.target.value;
-    console.log(allListings);
-
     setFilter(value);
-    if (value === "all") {
+    if (value == "all") {
       setListings(allListings);
-
-    } else if (value == "bomb") {
-      const rentListings = allListings.filter(
-        (listing) => listing.listingType == "bomb"
-      );
-      setListings(rentListings);
-    } else if (value == "chakkaram") {
-      const saleListings = allListings.filter(
-        (listing) => listing.listingType == "chakkaram"
-      );
-      setListings(saleListings);
-    } else if (value == "lakshmi") {
-      const rentListings = allListings.filter(
-        (listing) => listing.listingType == "lakshmi"
-      );
-      setListings(rentListings);
-    } else if (value == "saram") {
-      const rentListings = allListings.filter(
-        (listing) => listing.listingType == "saram"
-      );
-      setListings(rentListings);
-    } else if (value == "solapori") {
-      const rentListings = allListings.filter(
-        (listing) => listing.listingType == "solapori"
-      );
-      setListings(rentListings);
-    } else if (value == "saram") {
-      const rentListings = allListings.filter(
-        (listing) => listing.listingType == "saram"
-      );
-      setListings(rentListings);
-    } else if (value == "others") {
-      const rentListings = allListings.filter(
-        (listing) => listing.listingType == "others"
-      );
-      setListings(rentListings);
+    } else {
+      NewFunction(value);
     }
   };
 
-  
+  function NewFunction(params) {
+    let FiltersData = allListings.filter(
+      (items) => items.listingType == params
+    );
+    setListings(FiltersData);
+  }
 
-  console.log(allListings);
-  console.log(listings);
   return (
     <>
       <Navbar />
@@ -192,7 +160,6 @@ const HomeListing = () => {
                 </label>
               </div>
             </div>
-            
           </div>
 
           <div className="col-md-9">
@@ -215,7 +182,6 @@ const HomeListing = () => {
                       </div>
                       <div className="card-body">
                         <h5 className="card-title">{listing.name}</h5>
-                        <div className="card-title">{listing.tname}</div>
                         <div className="d-flex justify-content-between">
                           <p className="card-text">
                             Price: {listing.price} / box
@@ -232,7 +198,7 @@ const HomeListing = () => {
                           }
                           target="_blank"
                         >
-                          <div className="d-flex  my-2 justify-content-center text-success align-items-center gap-2">
+                          <div className="d-flex  my-2 text-success align-items-center gap-2">
                             <div>Contact</div>
                             <ImWhatsapp />
                           </div>
@@ -295,7 +261,7 @@ const HomeListing = () => {
           transition: all 0.7s;
           width: 101%;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-           scale: 1.1;
+          scale: 1.1;
         }
       `}</style>
     </>
